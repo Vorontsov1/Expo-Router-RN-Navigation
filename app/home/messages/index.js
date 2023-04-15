@@ -5,13 +5,29 @@ import { Link } from 'expo-router';
 const Messages = () => {
   return (
     <View>
-      <Link href='/home/messages/messageRoom'>Messages with Ievgen</Link>
-      <Text>Messages with Anton</Text>
-      <Text>Messages with Anastasiia</Text>
-      <Text>Messages with David</Text>
+      <Link style={styles.messages} href="/home/messages/123">
+        Messages with Ievgen
+      </Link>
+      <Link style={styles.messages} href="/home/messages/456">
+        Messages with Anton
+      </Link>
+      <Link style={styles.messages} href="/home/messages/123">
+        Messages with Anastasiia
+      </Link>
+      <Link style={styles.messages} href="/home/messages/456">
+        Messages with David
+      </Link>
     </View>
   );
 };
 
 export default Messages;
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  messages: {
+    color: "white",
+    fontSize: 20,
+    padding: 10,
+    backgroundColor: "#1317FB",
+    marginBottom: 10,  
+  },
+});

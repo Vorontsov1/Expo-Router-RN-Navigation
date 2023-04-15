@@ -30,7 +30,8 @@ export default () => {
             tabBarIcon: ({ color }) => (
               <Entypo name="message" size={30} color={color} /> 
               ),
-              title: 'Messages'
+              title: 'Messages',
+              headerShown: false,
           }}
         />
       </Tabs>
