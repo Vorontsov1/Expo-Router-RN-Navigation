@@ -4,15 +4,18 @@ import { FontAwesome, Entypo } from "@expo/vector-icons";
 export default () => {
     return (
       <Tabs
-        screenOptions={{ tabBarShowLabel: false, tabBarActiveTintColor: "red" }}
+        screenOptions={{
+          tabBarShowLabel: false,
+          tabBarActiveTintColor: "#FDA707",
+        }}
       >
         <Tabs.Screen
           name="feed"
           options={{
             tabBarIcon: ({ color }) => (
               <FontAwesome name="home" size={30} color={color} />
-              ),
-              title: 'Feed'
+            ),
+            title: "Feed",
           }}
         />
         <Tabs.Screen
@@ -20,18 +23,18 @@ export default () => {
           options={{
             tabBarIcon: ({ color }) => (
               <FontAwesome name="search-plus" size={30} color={color} />
-              ),
-              titlte: 'Search'
+            ),
+            titlte: "Search",
           }}
         />
         <Tabs.Screen
           name="messages"
           options={{
             tabBarIcon: ({ color }) => (
-              <Entypo name="message" size={30} color={color} /> 
-              ),
-              title: 'Messages',
-              headerShown: false,
+              <Entypo name="message" size={30} color={color} />
+            ),
+            title: "Messages",
+            headerShown: false,
           }}
         />
       </Tabs>
