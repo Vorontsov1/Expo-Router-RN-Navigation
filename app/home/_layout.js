@@ -11,7 +11,8 @@ export default () => {
           options={{
             tabBarIcon: ({ color }) => (
               <FontAwesome name="home" size={30} color={color} />
-            ),
+              ),
+              title: 'Feed'
           }}
         />
         <Tabs.Screen
@@ -19,7 +20,8 @@ export default () => {
           options={{
             tabBarIcon: ({ color }) => (
               <FontAwesome name="search-plus" size={30} color={color} />
-            ),
+              ),
+              titlte: 'Search'
           }}
         />
         <Tabs.Screen
@@ -27,7 +29,8 @@ export default () => {
           options={{
             tabBarIcon: ({ color }) => (
               <Entypo name="message" size={30} color={color} /> 
-            ),
+              ),
+              title: 'Messages'
           }}
         />
       </Tabs>
