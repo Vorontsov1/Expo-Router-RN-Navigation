@@ -10,14 +10,14 @@ export default function Page() {
         <Text style={styles.title}>Expo Router</Text>
         <Link
           style={styles.subtitle}
-          href="/profile?name=Anton&surname=Vorontsov"
+          href="/Anton"
         >
-          Open Anton`sProfile
+          Open Anton`s Profile
         </Link>
         <Link
           style={styles.subtitle}
           href={{
-            pathname: "/profile", params: { name: "Ievgen", surname: "Vorontsov" }
+            pathname: "/Ievgen", params: { name: "Ievgen", surname: "Vorontsov" }
           }}
         >
           Open Ievgen`s Profile
