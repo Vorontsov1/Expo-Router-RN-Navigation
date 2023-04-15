@@ -10,6 +10,7 @@ const profile = () => {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{
+        title: username,
         headerStyle: { backgroundColor: '#1E2632' },
         headerTintColor: '#FFE030',
       }} />

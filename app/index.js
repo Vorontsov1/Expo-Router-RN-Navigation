@@ -23,9 +23,6 @@ const users = [
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Stack.Screen
-       options={{title: 'Home'}}
-      />
       <View style={styles.main}>
         <Text style={styles.title}>Expo Router</Text>
   

@@ -11,5 +11,7 @@ export default () => {
             headerStyle:
                 { backgroundColor: '#FFE030' }
         }} 
-    />;
+    >
+        <Stack.Screen name="index" options={{ title: 'Home' }}/>
+        </Stack>
 };
