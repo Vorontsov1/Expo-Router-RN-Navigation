@@ -7,9 +7,20 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Link style={styles.subtitle} href="/profile">
-          Open Profile
+        <Text style={styles.title}>Expo Router</Text>
+        <Link
+          style={styles.subtitle}
+          href="/profile?name=Anton&surname=Vorontsov"
+        >
+          Open Anton`sProfile
+        </Link>
+        <Link
+          style={styles.subtitle}
+          href={{
+            pathname: "/profile", params: { name: "Ievgen", surname: "Vorontsov" }
+          }}
+        >
+          Open Ievgen`s Profile
         </Link>
       </View>
     </View>
@@ -30,6 +41,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
+    color: 'royalblue',
     fontSize: 64,
     fontWeight: "bold",
   },

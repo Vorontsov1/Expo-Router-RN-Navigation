@@ -1,13 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { useRouter } from 'expo-router';
+import { useRouter, useSearchParams } from 'expo-router';
 
 
 const profile = () => {
-const router = useRouter();
+  const router = useRouter();
+  const params = useSearchParams(params);
+  console.log(params);
+  
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Profile Screen</Text>
+      <Text style={styles.text}>Hello {params.name }!</Text>
       <TouchableOpacity style={styles.button} onPress={() => router.back()}>
         <Text style={styles.buttonText}>Go to Home</Text>
       </TouchableOpacity>
@@ -24,7 +28,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#FDA707",
   },
   text: {
-    fontSize: 30,
+    fontSize: 50,
+    fontWeight: "bold",
     marginTop: 50,
     textAlign: "center",
     color: "#259F90",
