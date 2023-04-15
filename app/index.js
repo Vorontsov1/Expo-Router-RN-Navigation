@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import {Link} from "expo-router";
+import {Link, Stack} from "expo-router";
 
 const users = [
   {
@@ -23,6 +23,9 @@ const users = [
 export default function Page() {
   return (
     <View style={styles.container}>
+      <Stack.Screen
+       options={{title: 'Home'}}
+      />
       <View style={styles.main}>
         <Text style={styles.title}>Expo Router</Text>
   
@@ -63,6 +66,5 @@ const styles = StyleSheet.create({
     color: "#FDA707",
     fontWeight: "bold",
     marginTop: 24,
-    textAlign: "center",
   },
 });

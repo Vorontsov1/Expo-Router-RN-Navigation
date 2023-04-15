@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { useRouter, useSearchParams } from 'expo-router';
+import { useRouter, useSearchParams, Stack } from 'expo-router';
 
 
 const profile = () => {
@@ -9,7 +9,13 @@ const profile = () => {
   
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello {name}(@{username})</Text>
+      <Stack.Screen options={{
+        headerStyle: { backgroundColor: '#1E2632' },
+        headerTintColor: '#FFE030',
+      }} />
+      <Text style={styles.text}>
+        Hello {name}(@{username})
+      </Text>
       <TouchableOpacity style={styles.button} onPress={() => router.back()}>
         <Text style={styles.buttonText}>Go to Home</Text>
       </TouchableOpacity>
