@@ -5,13 +5,11 @@ import { useRouter, useSearchParams } from 'expo-router';
 
 const profile = () => {
   const router = useRouter();
-  const params = useSearchParams(params);
-  console.log(params);
+  const {name, surname} = useSearchParams();
   
-
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello {params.name }!</Text>
+      <Text style={styles.text}>Hello {name}!</Text>
       <TouchableOpacity style={styles.button} onPress={() => router.back()}>
         <Text style={styles.buttonText}>Go to Home</Text>
       </TouchableOpacity>
