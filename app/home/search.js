@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import {Link, Stack, Redirect} from "expo-router";
+import { Link, Stack, Redirect } from "expo-router";
 
 const users = [
   {
@@ -21,24 +21,23 @@ const users = [
 ];
 
 export default function Page() {
-  return <Redirect  href={'/home'} />
-  // return (
-  //   <View style={styles.container}>
-  //     <View style={styles.main}>
-  //       <Text style={styles.title}>Expo-Router</Text>
-  
-  //       {users.map((user) => (
-  //         <Link
-  //           key={user.username}
-  //           style={styles.subtitle}
-  //           href={`/${user.username}`}>
-  //           Open {user.name}`s Profile
-  //         </Link>
-  //       ))}
+  return (
+    <View style={styles.container}>
+      <View style={styles.main}>
+        <Text style={styles.title}>Expo-Router</Text>
 
-  //     </View>
-  //   </View>
-  // );
+        {users.map((user) => (
+          <Link
+            key={user.username}
+            style={styles.subtitle}
+            href={`/${user.username}`}>
+            Open {user.name}`s Profile
+          </Link>
+        ))}
+
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
-    color: 'royalblue',
+    color: "royalblue",
     fontSize: 64,
     fontWeight: "bold",
   },
