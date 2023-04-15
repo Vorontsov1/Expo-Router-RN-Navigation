@@ -1,27 +1,40 @@
 import { StyleSheet, Text, View } from "react-native";
 import {Link} from "expo-router";
 
-
+const users = [
+  {
+    username: "ievgen",
+    name: "Ievgen",
+  },
+  {
+    username: "anton",
+    name: "Anton",
+  },
+  {
+    username: "nastya",
+    name: "Anastasiia",
+  },
+  {
+    username: "david",
+    name: "David",
+  },
+];
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Expo Router</Text>
-        <Link
-          style={styles.subtitle}
-          href="/Anton"
-        >
-          Open Anton`s Profile
-        </Link>
-        <Link
-          style={styles.subtitle}
-          href={{
-            pathname: "/Ievgen", params: { name: "Ievgen", surname: "Vorontsov" }
-          }}
-        >
-          Open Ievgen`s Profile
-        </Link>
+  
+        {users.map((user) => (
+          <Link
+            key={user.username}
+            style={styles.subtitle}
+            href={`/${user.username}`}>
+            Open {user.name}`s Profile
+          </Link>
+        ))}
+
       </View>
     </View>
   );
